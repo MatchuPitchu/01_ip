@@ -1,0 +1,10 @@
+.active {
+  border-left: 15px solid #fff;
+  background-color: #2b3e50;
+  color: #4e5d6c;
+  transition: border-width 0.5s linear;
+}
+
+.flag {
+  max-height: 150px;
+}
