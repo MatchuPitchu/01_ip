@@ -14,7 +14,7 @@ const Navbar = () => {
             </Link>
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                    <NavLink className="nav-link" to='/location'>{' '}Your current location</NavLink>
+                    <NavLink className="nav-link" to='/location'>{' '}About your current location</NavLink>
                 </li>
             </ul>
         </nav>
