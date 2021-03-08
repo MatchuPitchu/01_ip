@@ -6,8 +6,8 @@ import L from 'leaflet';
 import marker from '../assets/Icon geo-fill Bootstrap.svg';
 
 
-const Map = ( {location: {lat, lng}}) => {
-
+const Map = ( {location: {lat, lng, city}}) => {
+ 
     const myMarker = new L.Icon({
         iconUrl: marker,
         iconRetinaUrl: marker,
@@ -23,8 +23,7 @@ const Map = ( {location: {lat, lng}}) => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 <Marker position={[lat, lng]} icon={myMarker}>
-                    <Popup>A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
+                    <Popup><b>{city}</b><br />{lat}, {lng}</Popup>
                 </Marker>
             </MapContainer>
         </>
