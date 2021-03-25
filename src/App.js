@@ -48,7 +48,6 @@ const App = () => {
             </div>
         );
     
-    if(countryData && location)
         return (
         <>
             <Navbar />
