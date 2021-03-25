@@ -8,3 +8,40 @@
 .flag {
   max-height: 150px;
 }
+
+a {
+  font-weight: 400;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #df691a;
+}
+
+/* Custom Icon Map */
+.icon {
+  background-color: #fff;
+  font-size: 2.5em;
+  color: #4e5d6c;
+  border: 1px solid #4e5d6c;
+  border-radius: 90%;
+  padding: 3.5px;
+  animation-name: rotate;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Clear, otherwise white box in map */
+.leaflet-div-icon {
+  background: transparent !important;
+  border: 0 !important;
+}

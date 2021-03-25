@@ -1,10 +1,11 @@
 import React from 'react';
 import uuid from 'react-uuid';
 import Map from './Map';
+import Spinner from './Spinner';
 
 const Location = ( {location, countryData, flag} ) => {
 
-return (
+return location && countryData && flag ? (
     <>
         <div className="card mb-3">
             <div style={{paddingTop: '10px', paddingBottom: '10px', marginBottom: 0}} className="jumbotron row">
@@ -33,7 +34,7 @@ return (
             <div className="card-footer text-muted">Data from <a href="https://restcountries.eu">REST Countries</a></div>
         </div>
     </>
-    )
+    ) : <Spinner />;
 }
 
 export default Location;

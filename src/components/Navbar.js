@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 // Import React Bootstrap Icons
-import { GeoFill } from 'react-bootstrap-icons';
+import { GeoAlt } from 'react-bootstrap-icons';
 
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <Link className="navbar-brand" to="/">
-                <GeoFill color="#fff" size={"2em"} />
+                <GeoAlt color="#fff" size={"2em"} />
             </Link>
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">

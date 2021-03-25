@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './bootstrap.css';
 import './styles.css';
 import { Route, Switch } from 'react-router-dom';
-import Spinner from './components/Spinner';
 import Navbar from './components/Navbar';
+import Spinner from './components/Spinner';
 import IP from './components/IP';
 import Location from './components/Location';
 
@@ -18,10 +18,10 @@ const App = () => {
         setLoading(true);
         const fetchIp = async() => {
             const response = await fetch('https://geo.ipify.org/api/v1?apiKey=at_WDgfmNQxcpdkO6sZyIiyRFMPMbd44');
-            const data = await response.json();
-            setIp(data.ip);
-            setLocation(data.location);
-            console.log('IP of my Location: ', data.location)
+            const {ip, location} = await response.json();
+            setIp(ip);
+            setLocation(location);
+            console.log('IP of my Location: ', location)
             setLoading(false);
         };
         fetchIp();
@@ -48,16 +48,14 @@ const App = () => {
             </div>
         );
     
-    if(countryData, location)
+    if(countryData && location)
         return (
         <>
             <Navbar />
             <IP ip={ip}/>
-            <Switch>
-                <Route path='/location'>
-                    <Location location={location} countryData={countryData} flag={flag}/>
-                </Route>
-            </Switch>
+            <Route path='/location'>
+                <Location location={location} countryData={countryData} flag={flag}/>
+            </Route>
         </>
     );
 }
